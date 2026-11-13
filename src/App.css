@@ -1,0 +1,162 @@
+.content-layer {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  pointer-events: none;
+}
+
+.content-layer a,
+.content-layer button {
+  pointer-events: auto;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scrollbar-width: none !important;
+}
+
+body {
+  background: #000;
+  scroll-behavior: smooth;
+}
+
+nav {
+  width: 100%;
+  height: fit-content;
+  background-color: black;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.644);
+  z-index: 999;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.topside {
+  width: 100%;
+  height: 100%;
+}
+.nav-Lists {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+.nav-Lists li a {
+  color: white;
+  font-family: bold;
+  font-size: 1.5vw;
+  transition: 250ms;
+}
+.nav-Lists li:hover a {
+  filter: drop-shadow(2px 5px 15px white);
+}
+
+/* main side */
+
+.topWelcome {
+  color: rgb(173, 172, 247);
+  width: 100%;
+  font-size: 11.2vw;
+  display: flex;
+  justify-content: center;
+  font-family: bobble;
+  position: relative;
+  top: -40px;
+}
+.mainWelcomeDiv {
+  width: 100%;
+  height: 1000px;
+}
+.mainAvatar {
+  width: 100%;
+  max-width: 90%;
+  height: fit-content;
+  margin: 0 auto;
+
+  z-index: 99;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-avatar {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  translate: calc(-50%);
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+/* .Contact-button {
+    
+} */
+.about-me {
+  width: 20%;
+  z-index: -1;
+  font-family: normal;
+  font-size: 2vw;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.AboutMe-Texts {
+  width: 100%;
+  max-width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+  height: fit-content;
+  /* background-color: green; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 80px;
+  padding-bottom: 250px;
+}
+.abt-top-title {
+  font-size: 10vw;
+  font-family: bobble;
+  text-align: center;
+  color: white;
+}
+.abt-description {
+  max-width: 80%;
+  color: white;
+  margin: 0 auto;
+  font-family: normal;
+  font-size: 2.3vw;
+  word-spacing: 15px;
+  text-align: left;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  pointer-events: none;
+}
+
+.content-layer a,
+.content-layer button {
+  pointer-events: auto;
+}
+
+@font-face {
+  font-family: bobble;
+  src: url(./assets/fonts/super-woobly-font/SuperWoobly-8MJlz.ttf);
+}
+@font-face {
+  font-family: normal;
+  src: url(./assets/fonts/takugi-font/TakugidemoRegular-lx1re.ttf);
+}
+@font-face {
+  font-family: bold;
+  src: url(./assets/fonts/yorkela-font/YorkelaDemoRegular-1jdB2.otf);
+}

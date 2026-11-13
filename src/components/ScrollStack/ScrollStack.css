@@ -1,0 +1,115 @@
+.scroll-stack {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+}
+
+.scroll-stack--contained {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll-stack__inner {
+  position: relative;
+  padding-inline: clamp(1rem, 6%, 5rem);
+}
+
+.scroll-stack__slot {
+  position: sticky;
+}
+
+.scroll-stack-card {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50rem;
+  padding: 2rem;
+  border-radius: 28px;
+  border: 1px solid white;
+  background: light-dark(#000000, #7a7ac2);
+  color: light-dark(#18181b, #fafafa);
+  box-shadow:
+    0 0 0 1px light-dark(rgb(0 0 0 / 0.06), rgb(255 255 255 / 0.08)),
+    0 -12px 40px -16px rgb(0 0 0 / 0.35),
+    0 24px 48px -24px rgb(0 0 0 / 0.4);
+  transform-origin: 50% 0;
+  will-change: transform;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+.scroll-stack-card .top-side-card {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: relative;
+}
+.scroll-stack-card .top-side-card .cardNum {
+    font-family: bold;
+    font-size: 40px;
+    color: rgb(91, 91, 252);
+}
+.scroll-stack-card .top-side-card a{
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    font-family: bold;
+    line-height: 35px;
+    transition: 300ms;
+}
+.scroll-stack-card .top-side-card a:hover {
+    background-color: rgb(91, 91, 252);
+    border: 1px solid white;
+    color: white;
+}
+.scroll-stack-card .card-images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  object-fit: cover;
+  gap: 20px;
+  cursor: pointer;
+}
+.scroll-stack-card .card-images img {
+    border-radius: 10px;
+    cursor: pointer;
+}
+.scroll-stack-card .card-images .leftside {
+  width: 60%;
+  height: 90%;
+  object-fit: cover;
+}
+.scroll-stack-card .card-images .rightside {
+    width: 40%;
+    height: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+.scroll-stack-card .card-images .leftside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scroll-stack-card .card-images .rightside img {
+  width: 100%;
+  height: 46%;
+  object-fit: cover;
+}
+
+.scroll-stack-card__shade {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #000;
+  opacity: var(--scroll-stack-dim, 0);
+  pointer-events: none;
+}
